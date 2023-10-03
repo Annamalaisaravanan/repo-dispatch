@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
         max-parallel: 4
+    needs:
+        - build
     steps:
         - uses: actions/checkout@v1
 
