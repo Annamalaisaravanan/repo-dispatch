@@ -1,0 +1,16 @@
+name: Target workflow
+
+on: 
+    repository_dispatch:
+              types: [trigger-workflow-2]
+
+jobs:
+   hello_world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Print Hello World
+        run: echo "Hello, World!"
